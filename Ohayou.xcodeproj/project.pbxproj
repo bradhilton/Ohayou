@@ -10,6 +10,11 @@
 		A22F8D1E1C88898F00E42648 /* Ohayou.h in Headers */ = {isa = PBXBuildFile; fileRef = A22F8D1D1C88898F00E42648 /* Ohayou.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A22F8D251C88898F00E42648 /* Ohayou.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A22F8D1A1C88898F00E42648 /* Ohayou.framework */; };
 		A22F8D2A1C88898F00E42648 /* OhayouTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22F8D291C88898F00E42648 /* OhayouTests.swift */; };
+		A22F8D381C8889A300E42648 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22F8D341C8889A300E42648 /* Date.swift */; };
+		A22F8D391C8889A300E42648 /* DateComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22F8D351C8889A300E42648 /* DateComponents.swift */; };
+		A22F8D3A1C8889A300E42648 /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22F8D361C8889A300E42648 /* Calendar.swift */; };
+		A22F8D3B1C8889A300E42648 /* NSDate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22F8D371C8889A300E42648 /* NSDate+Extensions.swift */; };
+		A22F8D3D1C888A8200E42648 /* Ohayou.podspec in Resources */ = {isa = PBXBuildFile; fileRef = A22F8D3C1C888A8200E42648 /* Ohayou.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +34,11 @@
 		A22F8D241C88898F00E42648 /* OhayouTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OhayouTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A22F8D291C88898F00E42648 /* OhayouTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OhayouTests.swift; sourceTree = "<group>"; };
 		A22F8D2B1C88898F00E42648 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A22F8D341C8889A300E42648 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		A22F8D351C8889A300E42648 /* DateComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateComponents.swift; sourceTree = "<group>"; };
+		A22F8D361C8889A300E42648 /* Calendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
+		A22F8D371C8889A300E42648 /* NSDate+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Extensions.swift"; sourceTree = "<group>"; };
+		A22F8D3C1C888A8200E42648 /* Ohayou.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Ohayou.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,7 @@
 				A22F8D1C1C88898F00E42648 /* Ohayou */,
 				A22F8D281C88898F00E42648 /* OhayouTests */,
 				A22F8D1B1C88898F00E42648 /* Products */,
+				A22F8D3C1C888A8200E42648 /* Ohayou.podspec */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,6 +83,10 @@
 			isa = PBXGroup;
 			children = (
 				A22F8D1D1C88898F00E42648 /* Ohayou.h */,
+				A22F8D341C8889A300E42648 /* Date.swift */,
+				A22F8D351C8889A300E42648 /* DateComponents.swift */,
+				A22F8D361C8889A300E42648 /* Calendar.swift */,
+				A22F8D371C8889A300E42648 /* NSDate+Extensions.swift */,
 				A22F8D1F1C88898F00E42648 /* Info.plist */,
 			);
 			path = Ohayou;
@@ -177,6 +192,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A22F8D3D1C888A8200E42648 /* Ohayou.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +210,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A22F8D3B1C8889A300E42648 /* NSDate+Extensions.swift in Sources */,
+				A22F8D381C8889A300E42648 /* Date.swift in Sources */,
+				A22F8D3A1C8889A300E42648 /* Calendar.swift in Sources */,
+				A22F8D391C8889A300E42648 /* DateComponents.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +328,7 @@
 		A22F8D2F1C88898F00E42648 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -318,12 +339,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bradhilton.Ohayou;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		A22F8D301C88898F00E42648 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
